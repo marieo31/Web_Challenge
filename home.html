@@ -15,7 +15,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
    
-    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
     <link rel="stylesheet" href="style.css">    
     <title>Coordinates & Weather</title>     
 </head>
@@ -23,64 +23,41 @@
 
 
         <!-- Importing the Navbar -->
-        <!-- <link rel="import" href="/elements/navbar.html"> -->
-
-        <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                  <!-- Brand and toggle get grouped for better mobile display -->
-                  <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="home.html">Coordinates vs Weather</a>
-                  </div>
-              
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                      <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-                      <!-- <li><a href="#">Link</a></li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                                <li><a href="#">Cities Coordinates</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Coordinates vs. Temp</a></li>
-                                <li><a href="#">Coordinates vs. Humidity</a></li>
-                                <li><a href="#">Coordinates vs. Cloudiness</a></li>
-                                <li><a href="#">Coordinates vs. Wind</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Comparison</a></li>
-                      <li><a href="#">Data</a></li> -->
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">  
-                        <li><a href="home.html"><i class="glyphicon glyphicon-home"></i></a></li>                
-                        <li><a href="comparison.html">Comparison</a></li>
-                        <li><a href="data.html">Data</a></li>
-                        <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                        <li><a href="vis1_longlat.html">Cities Coordinates</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="vis2_coordTemp.html">Coordinates vs. Temp</a></li>
-                                        <li><a href="vis3_coordHumidity.html">Coordinates vs. Humidity</a></li>
-                                        <li><a href="vis4_coordCloudiness.html">Coordinates vs. Cloudiness</a></li>
-                                        <li><a href="vis5_coordWind.html">Coordinates vs. Wind</a></li>
-                                </ul>
-                              </li>                        
-
-                    </ul>
-                  </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-              </nav>
+        <!-- <div w3-include-html="Elements/navbar.html"></div> -->
+        <!-- <link rel="import" href="Elements/navbar.html"> -->
 
 
 
-    <header>Coordinates</header>
+    <h1>Coordinates vs. X</h1>
+
+    <p>The purpose of the project was to analyze how weather changes as you get closer to the equator and if trends can be observed on the positions of cities on the globe.
+      To accomplish this analysis, we builded a set of ramdom 
+      coordinates, identified the related cities and pulled weather data from the OpenWeatherMap API.
+        
+    </p>
+
+    <p>After assembling the dataset, we used Matplotlib to display various aspects of the weather vs. global coordinates, latitude and longitude.
+      Factor we looked at included:
+      <ul>
+        <li>Temperature</li>
+        <li>Cloudiness</li>
+        <li>Humidity</li>
+        <li>Wind speed</li>
+      </ul>
+    </p>
+
+    <p>This site provides the source data and visualizations created as part of the analysis, as well as description of any trends and correlation witnessed.</p>
+
+
+    <img width=500px src="Resources/fig1_cities_positions.png" alt="Cities position">
+
+
+    <h2>Visualizations</h2>
+
+    <img width=300px src="Resources/fig3_coord_MaxTemp.png" alt="Temperature plot">
+    <img width=300px src="Resources/fig4_coord_Humidity.png" alt="Humidity plot">
+    <img width=300px src="Resources/fig5_coord_Clouds.png" alt="Cloud plots">
+    <img width=300px src="Resources/fig6_coord_WindSpeed.png" alt="Wind speed plot">
     
 </body>
 </html>

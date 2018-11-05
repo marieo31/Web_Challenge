@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!-- A descriptive title and heading tag.
+The plot/visualization itself for the selected comparison.
+A paragraph describing the plot and its significance -->
+
+<!--    * Has the name of the site on the left of the nav which allows users 
+        to return to the landing page from any page.
+        * Contains a dropdown on the right of the navbar named "Plots" which provides 
+        links to each individual visualization page.
+        * Provides two more links on the right: "Comparisons" which links to the comparisons page, 
+        and "Data" which links to the data page.
+        * Is responsive (using media queries). The nav must have similar behavior as the screenshots 
+        "Navigation Menu" section (notice the background color change). -->
+
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <!-- Latest compiled and minified CSS -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <!-- Optional theme -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+                <!-- Coppied from https://code.jquery.com/ -->
+                <script     src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+                <!-- Latest compiled and minified JavaScript -->
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+                <!-- <link rel="stylesheet" href="reset.css"> -->
+                <link rel="stylesheet" href="style.css">    
+                <title>CitiesCoordinates</title>    
+        </head>
+
+<body>
+
+
+    <h1>Cities data-set</h1>
+
+    <p> The weather data was pulled through 3 steps:
+        <ol>
+            <li>We created 1500 combinations of latitudes and longitudes using Numpy random functions.</li>
+            <li>We reduced this list to 612 existing cities, using the citipy library to find the closest cities for a given set of coordinates.</li>
+            <li>We pulled weather information from 546 of these cities using the OpenWeather API.</li>
+                <ul>
+                    <li>395 cities in the North hemisphere (72.34%)</li>
+                    <li>151 cities in the South hemisphere (27.66%)</li>
+                </ul>
+        </ol> 
+    </p>
+
+    <img src="Resources/fig1_cities_positions.png" alt="Cities position">
+
+    
+</body>
+</html>
