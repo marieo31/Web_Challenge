@@ -30,59 +30,104 @@ A paragraph describing the plot and its significance -->
         </head>
 
 <body>
-<!-- Importing the Navbar -->
+        <!-- Importing the Navbar -->
         <!-- <div w3-include-html="Elements/navbar.html"></div> -->
         <!-- <link rel="import" href="Elements/navbar.html"> -->
         <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                  <!-- Brand and toggle get grouped for better mobile display -->
-                  <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="home.html" id="navbar_title">
-                        Coordinates vs Weather
-                    </a>
-                  </div>
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html" id="navbar_title">
+                    Coordinates vs Weather
+                </a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">  
+                    <li><a href="home.html"><i class="glyphicon glyphicon-home"></i></a></li>                
+                    <li class=nav_right><a href="comparison.html">Comparison</a></li>
+                    <li class=nav_right><a href="data.html">Data</a></li>
+                    <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                    <li class=nav_right><a href="vis1_longlat.html">Cities data-set</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class=nav_right><a href="vis2_coordTemp.html">Coordinates vs. Temp</a></li>
+                                    <li class=nav_right><a href="vis3_coordHumidity.html">Coordinates vs. Humidity</a></li>
+                                    <li class=nav_right><a href="vis4_coordCloudiness.html">Coordinates vs. Cloudiness</a></li>
+                                    <li class=nav_right><a href="vis5_coordWind.html">Coordinates vs. Wind</a></li>
+                            </ul>
+                          </li>                        
+    
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>  
+
+
+          <div class="container">
+
+              <div class="row">
+                  <div class="col-md-8">
+                    <div class="box">
+                        <h1>Coordinates vs. Humidity</h1>
+                        <div class="box2">
+
+                            <img width=600px src="Resources/fig4_coord_Humidity.png" alt="Coord and Humidity">
               
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">  
-                        <li><a href="home.html"><i class="glyphicon glyphicon-home"></i></a></li>                
-                        <li><a href="comparison.html">Comparison</a></li>
-                        <li><a href="data.html">Data</a></li>
-                        <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                        <li><a href="vis1_longlat.html">Cities data-set</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="vis2_coordTemp.html">Coordinates vs. Temp</a></li>
-                                        <li><a href="vis3_coordHumidity.html">Coordinates vs. Humidity</a></li>
-                                        <li><a href="vis4_coordCloudiness.html">Coordinates vs. Cloudiness</a></li>
-                                        <li><a href="vis5_coordWind.html">Coordinates vs. Wind</a></li>
-                                </ul>
-                              </li>                        
-        
-                    </ul>
-                  </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-              </nav>
+                        </div>
+                        
+                        <p>There is no strong correlation between Latitude and Humidity.</p>
+                        <p>Even if extremely desertic or humid area are not the most populated, the colormap plot with both coordinate allows to regognize some desertic places.</p>        
+                        <p>We can also notice that the drier places are not located on the equator, but are more encountered on -30 and +30° of latitudes.</p>
+                        
                   
-    <h1>Coordinates vs. Humidity</h1>
+                    
+                    </div>
+            
+                  
+                      
+                  </div>
+            
+                  <div class="col-sm-12 col-md-4">
+                      <div class="box">
+                          <h2>Visualizations</h2>    
+                              <div class="box_img" >
+                                  <a href="vis2_coordTemp.html"><img class=small_img width=150px src="Resources/fig3_coord_MaxTemp.png" alt="Temperature plot"></a>
+                              </div>
+                              <div class="box_imgr" id="highlight">
+                                  <a href="vis3_coordHumidity.html"><img class=small_img width=150px src="Resources/fig4_coord_Humidity.png" alt="Humidity plot"></a>
+                              </div>
+                              <div class="box_img">
+                                  <a href="vis4_coordCloudiness.html"><img class=small_img width=150px src="Resources/fig5_coord_Clouds.png" alt="Cloud plots"></a>
+                              </div>
+                              <div class="box_imgr">
+                                  <a href="vis5_coordWind.html"><img class=small_img width=150px src="Resources/fig6_coord_WindSpeed.png" alt="Wind plots"></a>   
+                              </div>                
+               
+                          
+                      </div>
+            
+                  </div>
+            
+              </div>
+            </div> 
+                  
+    <h1></h1>
 
-        <p>There is no strong correlation between Latitude and Humidity.</p>
-        <p>Even if extremely desertic or humid area are not the most populated, the colormap plot with both coordinate allows to regognize some desertic places.</p>        
-        <p>We can also notice that the drier places are not located on the equator, but are more encountered on -30 and +30° of latitudes.</p>
-        
 
 
-    <img src="Resources/fig4_coord_Humidity.png" alt="Coord and Humidity">
 
+    
 
 </body>
 </html>
